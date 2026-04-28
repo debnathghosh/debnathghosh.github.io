@@ -527,18 +527,92 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  /* ===== NAV → bottom bar ===== */
   nav {
-    position: static;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+
     width: 100%;
-    height: auto;
+    height: 60px;
+
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0;
+    border-top: 1px solid #eee;
     border-right: none;
-    border-bottom: 1px solid #eee;
+    background: white;
   }
 
+  nav a {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  /* ===== CONTENT SHIFT ===== */
   .container {
     margin-left: 0;
+    padding: 20px 15px;
+    padding-bottom: 80px; /* space for bottom nav */
+  }
+
+  /* ===== HEADER ===== */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile {
+    width: 90px;
+    margin-top: 10px;
+  }
+
+  /* ===== PROJECTS ===== */
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .project-link {
+    align-self: flex-start;
+  }
+
+  /* ===== EXPERIENCE ===== */
+  .leaf {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leaf-project {
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  /* ===== BUBBLES → TAGS ===== */
+  .bubble-area {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .bubble {
+    position: static;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* ===== HIGHLIGHTS ===== */
+  .highlights-container {
+    grid-template-columns: 1fr;
   }
 }
 
